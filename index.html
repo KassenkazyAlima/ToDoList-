@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Project List -->
+        <div class="sidebar">
+            <h2>Projects</h2>
+            <ul id="projectList"></ul>
+            <form id="newProjectForm">
+                <input type="text" id="projectName" placeholder="New Project" required />
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+
+        <!-- Todo List -->
+        <div class="todo-container">
+            <h2>Todos</h2>
+            <ul id="todoList"></ul>
+            <form id="newTodoForm">
+                <input type="text" id="todoTitle" placeholder="Todo Title" required />
+                <input type="date" id="todoDueDate" required />
+                <select id="todoPriority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <textarea id="todoDescription" placeholder="Description"></textarea>
+                <button type="submit">Add Todo</button>
+            </form>
+        </div>
+
+        <!-- Todo Detail -->
+        <div id="todoDetail" class="todo-detail">
+            <h3>Todo Detail</h3>
+            <p><strong>Title:</strong> <span id="todoTitleDetail"></span></p>
+            <p><strong>Description:</strong> <span id="todoDescriptionDetail"></span></p>
+            <p><strong>Due Date:</strong> <span id="todoDueDateDetail"></span></p>
+            <p><strong>Priority:</strong> <span id="todoPriorityDetail"></span></p>
+            <button id="completeTodo">Mark as Complete</button>
+            <button id="deleteTodo">Delete Todo</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
